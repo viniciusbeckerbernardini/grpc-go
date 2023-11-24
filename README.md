@@ -75,31 +75,31 @@ no caso ali string query = 1; representa: [tipo] [nome] = [ordem];
 
 ## Formatos de comunicação 
 
-gRPC - API "unary" (implementado no projeto):
+- gRPC - API "unary" (implementado no projeto):
 	- Cliente faz request e recebe response;
-gRPC - API "server streaming":
+- gRPC - API "server streaming":
 	-  Cliente faz request e pode receber uma ou várias response;
 		- Para processos mais lentos e trabalhosos. Conforme o processo vai sendo resolvido ele dispara aos poucos os resultados;
-gRPC - API "client streaming" (implementado no projeto):
+- gRPC - API "client streaming" (implementado no projeto):
 	- Client faz várias requests para o server e ele retorna uma response:
 		- Para processos longos do lado do browser como processamento de grandes arquivos
-gRPC - API "bi directional streaming" (implementado no projeto):
+- gRPC - API "bi directional streaming" (implementado no projeto):
 	- Cliente manda várias requests para o servidor e o mesmo retorna várias responses;
 
 ## REST vs gRPC:
- 	- REST:
- 		- Texto/JSON;
- 		- Unidirecional;
- 		- Alta latência;
- 		- Sem contrato (maior chance de erros)
- 		- Sem suporte a streaming;
- 		- Design pré-definido (tem os métodos definidos, padrão de url, no final do dia é um padrão de crud);
- 		- Bibliotecas de terceiro para fazer conexões.
- 	- gRPC:
- 		- Proto buffs;
- 		- Bidirecional e assíncrono;
- 		- Baixa latência;
- 		- Contrato definido (.proto);
- 		- Suporte a streaming;
- 		- Design é livre;
- 		- Geração de código (libs nativas == menos problemas).
+ - REST:
+	- Texto/JSON;
+ 	- Unidirecional;
+ 	- Alta latência;
+ 	- Sem contrato (maior chance de erros)
+ 	- Sem suporte a streaming;
+ 	- Design pré-definido (tem os métodos definidos, padrão de url, no final do dia é um padrão de crud);
+ 	- Bibliotecas de terceiro para fazer conexões.
+ - gRPC:
+ 	- Proto buffs;
+ 	- Bidirecional e assíncrono;
+ 	- Baixa latência;
+ 	- Contrato definido (.proto);
+ 	- Suporte a streaming;
+ 	- Design é livre;
+ 	- Geração de código (libs nativas == menos problemas).
